@@ -25,6 +25,8 @@ class Character:
 
     skills = []
 
+    is_alive = True
+
     def attack(self, enemy):
         dmg = (self.weapon.damage * self.strenght / 1.4) * random.choice([0.96, 0.97, 0.98, 0.99, 1, 1.01, 1.02])
         multiplier, body_part = get_body_part()

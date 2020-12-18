@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f7d1305-dbe6-4d67-865e-99b458a5ca40" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/classes/player.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game/classes/char_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/classes/char_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/classes/character.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/classes/character.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/classes/inventory.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/classes/inventory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/utils/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/utils/constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/utils/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/utils/functions.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

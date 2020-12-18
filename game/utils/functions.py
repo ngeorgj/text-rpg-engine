@@ -4,6 +4,8 @@ import time
 
 from game.config import D020
 
+def question(question):
+    return input(f'{question}\n -> ')
 
 def output(argument):
     return os.system(argument)
