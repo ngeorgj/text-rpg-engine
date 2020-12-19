@@ -29,6 +29,8 @@ It is known that <b>gamification</b> is the best way to learn things, so make us
 ### COUNTRIES
 
 ### CONFIGURATION
+#### The Config File
+```This file holds all the configurations for the game, including [Classes, Races, Countries, Chapters]```
 
 ### CHAPTERS
 
