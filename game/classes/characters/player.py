@@ -1,13 +1,11 @@
-from math import floor
+from game.utils.question_functions import question, question_with_options
+from game.utils.constants import OPEN_INVENTORY, TRAVEL
 from game.classes.characters.character import Character
 from game.classes.geopositioning import GeoPositioning
-from game.classes.inventory import Inventory
-from game.utils.constants import OPEN_INVENTORY, TRAVEL
+from game.classes.interface import Interface
+from math import floor
 
-from game.utils.question_functions import question, question_with_options
-
-
-class Player(Character):
+class Player(Character, Interface):
 
     def __init__(self):
         from game.config import PLAYABLE_CLASSES, PLAYABLE_RACES
@@ -39,13 +37,7 @@ class Player(Character):
         else:
             return math
 
-    def screen(self):
-        print(f'[{self.name} lvl {self.level} ]======================================[GAMENAME]')
-        print(f' {self.inventory}                                    Gold {self.inventory.gold}')
-        print(f' Experience [2000/10000]                                                       ')
-        print(f' Active Effects')
-        print(f' {[self.active_effects]}')
-        print(f'[ Actions ]====================================================================')
+
 
     @property
     def base_actions(self):

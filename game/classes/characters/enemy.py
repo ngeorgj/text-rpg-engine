@@ -1,8 +1,8 @@
-import random
+from game.utils.constants import ATTACK, CAST_SPELL, COMMON
 from game.classes.characters.character import Character
 from game.classes.weapon import Weapon
 from game.items.armor import Armor
-from game.utils.constants import ATTACK, CAST_SPELL, COMMON
+import random
 
 
 class Enemy(Character):

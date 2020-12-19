@@ -1,11 +1,10 @@
-import random
-from game.classes.combat import Combat
-from game.classes.inventory import Inventory
-from game.classes.weapon import Weapon
 from game.utils.constants import PERMANENT, EQUIPABLE_BODY_PARTS
 from game.utils.game_functions import get_body_part, game_print
 from game.utils.question_functions import question_with_options
-
+from game.classes.inventory import Inventory
+from game.classes.weapon import Weapon
+from game.classes.combat import Combat
+import random
 
 class Character:
     """
