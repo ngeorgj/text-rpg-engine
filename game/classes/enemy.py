@@ -1,4 +1,6 @@
 from game.classes.character import Character
+from game.classes.geopositioning import GeoPositioning
+from game.utils.constants import TRAVEL
 
 
 class Enemy(Character):
@@ -19,7 +21,7 @@ class Enemy(Character):
     intelligence = 2
     agility = 2
 
-    inventory = Inventory()
+    inventory = ''
     gold = 0
     weapon: Weapon = object
 
@@ -29,10 +31,7 @@ class Enemy(Character):
 
     active_effects: list = []
 
-    actions = {
-        OPEN_INVENTORY: inventory.show,
-        TRAVEL: Travel.options,
-    }
+
 
     level = 0
     experience = 0

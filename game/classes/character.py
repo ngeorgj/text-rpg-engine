@@ -2,9 +2,9 @@ import random
 
 from game.classes.combat import Combat
 from game.classes.inventory import Inventory
-from game.classes.travel import Travel
+from game.classes.geopositioning import GeoPositioning
 from game.classes.weapon import Weapon
-from game.utils.constants import PERMANENT, POTION, GRENADE, ATTACK, OPEN_INVENTORY, TRAVEL
+from game.utils.constants import PERMANENT, OPEN_INVENTORY, TRAVEL
 from game.utils.game_functions import get_body_part
 from game.utils.question_functions import question_with_options
 
@@ -38,9 +38,16 @@ class Character:
     active_effects: list = []
 
     actions = {
-        OPEN_INVENTORY: inventory.show,
-        TRAVEL: Travel.options,
+
     }
+
+    @property
+    def base_actions(self):
+        return {OPEN_INVENTORY: self.inventory.show,
+                TRAVEL: GeoPositioning.make_travel}
+
+    def actions(self):
+        return dict(self.base_actions, **self.specific_actions)
 
     level = 0
     experience = 0
@@ -55,6 +62,7 @@ class Character:
         self.in_combat = False
 
     def attack(self, enemy):
+        # TODO
         dmg = (self.weapon.damage * self.strenght / 1.4) * random.choice([0.96, 0.97, 0.98, 0.99, 1, 1.01, 1.02])
         multiplier, body_part = get_body_part()
         total_damage = dmg * multiplier
@@ -79,15 +87,6 @@ class Character:
 
     @property
     def available_actions(self):
-        if self.is_ai:
-            return ATTACK
-        lst = self.actions
-        if self.in_combat:
-            lst.extend(self.weapon.actions)
-            for item in self.inventory:
-                if GRENADE in item.name:
-                    lst.extend(item.actions)
-        for item in self.inventory:
-            if POTION in item.name and self.hp < self.max_hp:
-                lst.extend(item.actions)
+        """ Complicated """
+        # TODO : Get the 'actions' property from all the objects inside and compile.
         return question_with_options('What will you do?', lst)

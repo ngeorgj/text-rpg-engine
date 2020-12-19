@@ -1,3 +1,17 @@
+"""
+Classes
+
+Classes can be created using the parent classes from game/classes/classe.
+
+    - Some pre-made classes are:
+      -> IntelligenceBasedClass,
+      -> StrenghtBasedClass,
+      -> AgilityBasedClass
+
+Use these classes as Parent Class for your Class.
+Use the classes below as a baseline.
+"""
+
 from game.classes.classe import IntelligenceBasedClass, StrenghtBasedClass
 from game.items.weapons import RustedSword, WoodenStaff
 

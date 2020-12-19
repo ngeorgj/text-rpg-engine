@@ -1,7 +1,7 @@
 from game.gclasses import Warrior, Paladin, Mage
 from game.graces import Human, Elf
+from game.reference.countries import available_countries
 from game.skills import warrior, mage, paladin
-from game.reference.countries import London
 from game.utils.constants import *
 from game.chapters.chapter_one.info import Chapter1
 
@@ -20,6 +20,8 @@ PLAYABLE_RACES = {
 }
 
 PLAYABLE_CLASSES = {
+    # You can Add/Delete classes.
+    # File : game/gclasses.py
     WARRIOR: Warrior(),
     PALADIN: Paladin(),
     MAGE: Mage()
@@ -31,7 +33,7 @@ SKILLS = {
     MAGE    : mage.list_of_skills,
 }
 
-ALLOWED_COUNTRIES = [London]
+ALLOWED_COUNTRIES = available_countries
 
 GAME_STATE = {
     'YEAR': GAME_STARTING_YEAR,
