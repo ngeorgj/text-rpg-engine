@@ -20,3 +20,39 @@ STR = 'strenght'
 INT = 'intelligence'
 
 WEAPON = 'weapon'
+
+# OTHER
+PERMANENT = 'permanent'
+TEMPORARY = 'temporary'
+OFFENSIVE = 'offensive'
+DEFENSIVE = 'defensive'
+STATUS    = 'status'
+HEALING   = 'healing'
+
+# ITEM CONSTANTS
+POTION = 'potion'
+GRENADE = 'grenade'
+
+# RARITIES
+COMMON = 'common'
+UNCOMMON = 'uncommon'
+RARE = 'rare'
+EPIC = 'epic'
+LEGENDARY = 'legendary'
+
+# CHOICES
+YES = 'yes'
+NO = 'no'
+CHOICES_YES_NO = [YES, NO]
+ATTACK = 'attack'
+OPEN_INVENTORY = 'open inventory'
+
+# PLACES
+TRAVEL = 'travel'
+PORT = 'port'
+AIRPORT = 'airport'
+HOTEL = 'hotel'
+
+# RACES
+HUMAN = 'Human'
+ELF = 'Elf'

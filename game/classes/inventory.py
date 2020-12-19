@@ -1,4 +1,5 @@
-from game.utils.functions import get_input, cls
+from game.utils.constants import YES, CHOICES_YES_NO
+from game.utils.question_functions import question_with_options
 
 
 class Inventory:
@@ -14,7 +15,7 @@ class Inventory:
     def remove(self, item):
         for item in self.items:
             print(f'{item.name} x {item.amount}')
-        answer = get_input('Are you sure?', ['yes', 'no'])
+        answer = question_with_options('Are you sure?', CHOICES_YES_NO)
         if answer == 'yes':
             del self.items[item.name]
 
@@ -23,11 +24,17 @@ class Inventory:
         print(f"[Inventory] ===================== Items {len(self.items)}")
 
     def sell_item(self, item):
-        answer = get_input('Are you sure?', ['yes', 'no'])
-        if answer == 'yes':
-            del self.items[item]
-        self.gold += item.worth
-        print(f'Item sold for {item.worth}')
+        amount = 0
+        yes_no = question_with_options('Are you sure?', CHOICES_YES_NO)
+        if yes_no == YES:
+            if item.amount != 1 and item.amount > 0:
+                amount = question_with_options("How many?", ['all', f'You can choose between [1 - {item.amount}]'])
+            self.gold += item.worth
+            if item.amount == 0:
+                del self.items[item]
+            print(f'{amount}x of "{item.name}" sold for {item.worth}')
+        else:
+            print("No items sold.")
 
     def get_all(self):
         return self.items

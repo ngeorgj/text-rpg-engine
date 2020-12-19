@@ -1,34 +1,8 @@
-import os
+from game.elements import D020
 import random
-import time
 
-from game.config import D020
-
-def question(question):
-    return input(f'{question}\n -> ')
-
-def output(argument):
-    return os.system(argument)
-
-def cls():
-    return os.system('cls')
-
-def wait(seconds):
-    return time.sleep(seconds)
-
-def get_input(text, choices):
-    output(text)
-    answer = str(input()).lower()
-    if answer not in choices:
-        print('please select a valid choice.')
-        get_input(text, choices)
-    else:
-        cls()
-        return answer
-
-def press_enter_to_continue():
-    input(" > Press 'Enter' to continue.")
-
+def game_print(content):
+    print(f' {content}')
 
 def get_body_part():
     """
@@ -60,3 +34,9 @@ def get_body_part():
         return body[composed], composed
     else:
         return body['missed'], 'missed'
+
+def end_game():
+    from game.utils.question_functions import press_enter_to_continue
+    print("Thanks for Playing!")
+    press_enter_to_continue()
+

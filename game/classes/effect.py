@@ -1,3 +1,6 @@
+from game.utils.constants import PERMANENT, TEMPORARY
+
+
 class Effect:
     is_recurrent = False
 
@@ -6,15 +9,14 @@ class Effect:
     effect = ''
     attribute = ''
 
-    def __init__(self):
-        self.set_turns()
+    turns = 0
+    total_turns = 0
 
-    def set_turns(self):
-        self.turns = self.turns
-        self.total_turns = self.turns
+    _type = TEMPORARY
 
     def __repr__(self):
         return self.name
+
 
 class Buff(Effect):
 
@@ -24,6 +26,7 @@ class Buff(Effect):
     def deactivate(self):
         setattr(self, self.attribute, getattr(self, self.attribute) - self.effect)
 
+
 class Debuff(Effect):
 
     def activate(self):
@@ -32,11 +35,14 @@ class Debuff(Effect):
     def deactivate(self):
         setattr(self, self.attribute, getattr(self, self.attribute) + self.effect)
 
+
 class RecurrentBuff(Buff):
     is_recurrent = True
 
+
 class RecurrentDebuff(Debuff):
     is_recurrent = True
+
 
 class MassBuff(Effect):
 
@@ -48,6 +54,7 @@ class MassBuff(Effect):
         for ally in group_of_allies:
             setattr(ally, self.attribute, getattr(ally, self.attribute) - self.effect)
 
+
 class MassDebuff(Effect):
 
     def activate(self, group_of_enemies):
@@ -58,8 +65,14 @@ class MassDebuff(Effect):
         for ally in group_of_enemies:
             setattr(ally, self.attribute, getattr(ally, self.attribute) + self.effect)
 
+
 class RecurrentMassBuff(MassBuff):
     is_recurrent = True
 
+
 class RecurrentMassDebuff(MassBuff):
     is_recurrent = True
+
+
+class PermanentBuff(Buff):
+    _type = PERMANENT

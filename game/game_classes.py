@@ -1,9 +1,7 @@
-from game.classes.classe import CharacterClass
-from game.items.weapons import WoodenStaff, RustedSword
-from game.utils.functions import get_input
+from game.classes.classe import IntelligenceBasedClass, StrenghtBasedClass
+from game.items.weapons import RustedSword, WoodenStaff
 
-
-class Mage(CharacterClass):
+class Mage(IntelligenceBasedClass):
     name = 'Mage'
     description = 'An Elder Mage, expert at his magic.'
 
@@ -16,7 +14,8 @@ class Mage(CharacterClass):
 
     starting_weapon = WoodenStaff
 
-class Warrior(CharacterClass):
+
+class Warrior(StrenghtBasedClass):
     name = 'Warrior'
     description = 'A Noble Warrior'
 
@@ -29,7 +28,8 @@ class Warrior(CharacterClass):
 
     starting_weapon = RustedSword
 
-class Paladin(CharacterClass):
+
+class Paladin(IntelligenceBasedClass):
     name = 'Paladin'
     description = 'A Sacred Paladin'
 
@@ -42,21 +42,3 @@ class Paladin(CharacterClass):
 
     starting_weapon = RustedSword
 
-
-
-
-
-
-
-
-
-class PlayableClasses:
-
-    Paladin = Paladin()
-    Warrior = Warrior()
-    Mage    = Mage()
-
-    @staticmethod
-    def choose() -> object:
-        answer = get_input('What is the Class of your Hero?', list(vars(PlayableClasses).keys))
-        return vars(PlayableClasses)[answer]

@@ -1,4 +1,5 @@
-from game.utils.functions import get_input, cls
+from game.utils.cmd_line_functions import cls
+from game.utils.question_functions import question_with_options
 
 
 class CharacterClass:
@@ -19,7 +20,7 @@ class CharacterClass:
         for skill in self.skills:
             print(f' -> {skill} - {skill.description}')
         print()
-        return get_input('Which one do you want to cast?', [skill.name for skill in self.skills])
+        return question_with_options('Which one do you want to cast?', [skill.name for skill in self.skills])
 
     def __repr__(self):
         return self.name

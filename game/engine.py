@@ -1,16 +1,18 @@
 from game.animations.base import intro
 from game.config import GAME_OPTIONS, GAME_DESCRIPTION, GAME_NAME, GAME_CHAPTERS
 from game.utils.constants import PLAY, CHAPTERS, ABOUT, LORE, HOW_TO_PLAY, QUIT
-from game.utils.functions import get_input
 from game.utils import menu_items
+from game.utils.game_functions import end_game
 from game.utils.menu_items import game_menu
+from game.utils.question_functions import question_with_options, question
+
 
 class Engine:
 
-    def select_from_menu(self, option):
+    def select_from_menu(self, option, game):
         option = option.lower()
         if option == PLAY:
-            self.play()
+            self.play(game)
         elif option == ABOUT:
             menu_items.about()
         elif option == CHAPTERS:
@@ -21,20 +23,19 @@ class Engine:
             menu_items.about_htp()
         elif option == QUIT:
             quit()
-        game_menu(GAME_OPTIONS)
+        else:
+            game_menu(GAME_NAME, GAME_OPTIONS)
 
-    def run(self):
+    def run(self, game):
         intro(GAME_NAME, GAME_DESCRIPTION)
-        game_menu(GAME_NAME, GAME_OPTIONS)
-        answer = get_input('Answer below:', GAME_OPTIONS)
-        self.select_from_menu(answer)
+        game_menu()
+        output = question_with_options('Type your answer below', GAME_OPTIONS, False, True)
+        self.select_from_menu(output, game)
 
-    def end_game(self):
-        print("Thanks for Playing!")
-        pass
-
-    def play(self):
+    def play(self, game):
+        game.create_character()
         for chapter in GAME_CHAPTERS:
-            chapter.begin()
-        self.end_game()
+            chapter().chapter_loop()
+        end_game()
+
 
