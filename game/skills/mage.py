@@ -1,4 +1,4 @@
-from game.classes.skill import Skill
+from game.classes.skill import Skill, OffensiveSkill
 
 # Support Skills
 IceArmor   = Skill('Ice Armor',
@@ -6,11 +6,11 @@ IceArmor   = Skill('Ice Armor',
                    500, 5, 11, 3, 3, 3)
 
 # Offensive Skills
-Fireball   = Skill('Fireball',
+Fireball   = OffensiveSkill('Fireball',
                    'Releases one fireball towards the enemy.',
                    55, 10, 9, 2, 3, 1)
 
-SuperNova  = Skill('Super Nova',
+SuperNova  = OffensiveSkill('Super Nova',
                    'Fire Magic, Invoques a SuperNova.',
                    155, 25, 10, 5, 3, 5)
 

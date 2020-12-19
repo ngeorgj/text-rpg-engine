@@ -10,14 +10,14 @@ class Character:
     title = ''
     race = ''
 
-    char_class = ''
+    classe = ''
 
     hp = 0
     mp = 0
 
-    strenght = 5
-    intelligence = 4
-    agility = 5
+    strenght = 2
+    intelligence = 2
+    agility = 2
 
     inventory = Inventory()
     gold = 0
@@ -32,5 +32,19 @@ class Character:
         multiplier, body_part = get_body_part()
         total_damage = dmg * multiplier
         enemy.hp -= total_damage
-        print(f"{self.name} {self.weapon.on_attack_fx} at {enemy}'s {body_part} dealing {total_damage} damage.")
+        self.refresh_active_effects()
+
+    def refresh_active_effects(self):
+        for effect in self.active_effects:
+
+            if effect.is_recurrent:
+                effect.activate(self)
+
+            if effect.turns_left == 0:
+                self.active_effects.remove(effect)
+                print(f'Active Effect : "{effect}" ended this turn.')
+
+
+        for effect in [fx for fx in self.active_effects]:
+            effect.turns_left -= 1
 

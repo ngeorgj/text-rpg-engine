@@ -2,14 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f7d1305-dbe6-4d67-865e-99b458a5ca40" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/game/classes/player.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/classes/char_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/classes/char_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/classes/char_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/classes/classe.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game/classes/character.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/classes/character.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/classes/inventory.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/classes/inventory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/classes/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/classes/player.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/classes/skill.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/classes/skill.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/items/weapons.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/items/weapons.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/skills/mage.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/skills/mage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/skills/paladin.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/skills/paladin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/skills/warrior.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/skills/warrior.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game/utils/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/utils/constants.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/utils/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/utils/functions.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,8 +41,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/game/skills" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\georg\Desktop\text_game_skeleton\game\skills" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\georg\Desktop\text_game_skeleton\game\classes" />
       <recent name="C:\Users\georg\Desktop\text_game_skeleton" />
@@ -57,5 +64,15 @@
       <updated>1608227984829</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="385" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1608336299786">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="385" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1608336299786" />
+    <state x="510" y="56" key="refactoring.ChangeSignatureDialog" timestamp="1608335264959">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="510" y="56" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1608335264959" />
   </component>
 </project>
