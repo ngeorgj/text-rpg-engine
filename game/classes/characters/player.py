@@ -1,5 +1,5 @@
 from math import floor
-from game.classes.character import Character
+from game.classes.characters.character import Character
 from game.classes.geopositioning import GeoPositioning
 from game.classes.inventory import Inventory
 from game.utils.constants import OPEN_INVENTORY, TRAVEL

@@ -1,6 +1,8 @@
 import random
-from game.classes.character import Character
-from game.utils.constants import TRAVEL, ATTACK, CAST_SPELL, COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+from game.classes.characters.character import Character
+from game.classes.weapon import Weapon
+from game.items.armor import Armor
+from game.utils.constants import ATTACK, CAST_SPELL, COMMON
 
 
 class Enemy(Character):
@@ -17,7 +19,7 @@ class Enemy(Character):
         self.intelligence = self.random_stats
         self.agility = self.random_stats
         self.strenght = self.random_stats
-        self.weapon = self.get_random_weapon()
+        self.weapon = self.get_random_weapon(COMMON)
         self.skills = self.classe.skills
 
     active_effects: list = []
@@ -42,5 +44,10 @@ class Enemy(Character):
     def random_stats(self):
         return random.randint(1, 20)
 
-    def get_random_weapon(self):
-        pass
+    def get_random_weapon(self, tier):
+        if tier == COMMON:
+            return Weapon('Knife', "Simple Knife", 1, 1, 10)
+
+    def get_random_torso(self, tier):
+        if tier == COMMON:
+            return Armor('Ragged Clothes', "Very old clothes", 1, 1, 'torso', 5)

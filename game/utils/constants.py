@@ -3,7 +3,7 @@ PLAY        = 'play'
 CHAPTERS    = 'chapters'
 ABOUT       = 'about'
 LORE        = 'lore'
-HOW_TO_PLAY = 'how-to-play'
+HOW_TO_PLAY = 'how to play'
 QUIT        = 'quit'
 
 # CLASSES
@@ -28,6 +28,15 @@ OFFENSIVE = 'offensive'
 DEFENSIVE = 'defensive'
 STATUS    = 'status'
 HEALING   = 'healing'
+
+# BODY PARTS
+HEAD = 'head'
+TORSO = 'torso'
+RIGHT_HAND = 'right hand'
+LEFT_HAND = 'left hand'
+LEGS = 'legs'
+FEET = 'feet'
+EQUIPABLE_BODY_PARTS = [HEAD, TORSO, RIGHT_HAND, LEFT_HAND, LEGS, FEET]
 
 # ITEM CONSTANTS
 POTION = 'potion'

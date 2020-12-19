@@ -13,8 +13,11 @@ class Effect:
         Damage Effects [One time Only or Recurrent Damage]
 
     """
+    # Unchangeable
     is_recurrent = False
+    _type = TEMPORARY
 
+    # Changeable
     name = ''
     description = ''
     effect_value = ''
@@ -23,14 +26,13 @@ class Effect:
     turns = 0
     total_turns = 0
 
-    _type = TEMPORARY
+    def __init__(self, properties: dict):
+        for arg in properties.items():
+            setattr(self, arg[0], arg[1])
 
     @property
     def specific_options(self):
         return {f'activate {self.name}': self.activate}
-
-    def on_cast(self):
-        game_print(f'You cast {self.name}.')
 
     def activate(self):
         """Must be Overwritten"""

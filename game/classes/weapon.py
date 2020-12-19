@@ -1,4 +1,4 @@
-from game.classes.item import Item
+from game.items.item import Item
 
 
 class Weapon(Item):

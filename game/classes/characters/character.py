@@ -2,7 +2,7 @@ import random
 from game.classes.combat import Combat
 from game.classes.inventory import Inventory
 from game.classes.weapon import Weapon
-from game.utils.constants import PERMANENT
+from game.utils.constants import PERMANENT, EQUIPABLE_BODY_PARTS
 from game.utils.game_functions import get_body_part, game_print
 from game.utils.question_functions import question_with_options
 
@@ -24,6 +24,21 @@ class Character:
     hp = 50
     max_mp = 20
     mp = 20
+
+    equiped_items = {
+                                     'head': '',
+                                     'body': '',
+                            'right-hand': '', 'left-hand': '',
+                                     'legs': '',
+                                     'feet': ''
+                    }
+
+    @property
+    def armor(self):
+        total = 0
+        for item in self.equiped_items.items():
+            total.append(self.equiped_items[item[0]].armor)
+        return total
 
     strenght = 2
     intelligence = 2
@@ -102,3 +117,15 @@ class Character:
         """ Complicated """
         dct = dict(self.base_options, **self.specific_options)
         return question_with_options('What will you do?', dct)
+
+    def equip(self, item):
+        if item.equip_at not in EQUIPABLE_BODY_PARTS:
+            game_print("You cannot equip that item.")
+        elif item.equip_at not in EQUIPABLE_BODY_PARTS:
+            game_print("You cannot equip that item.")
+        else:
+            old_item = self.equiped_items.get(item.equip_at)
+            self.inventory.add(old_item)
+            self.equiped_items[item.equip_at] = item
+            game_print(f'Item {item.name} Equiped at {item.equip_at}.')
+

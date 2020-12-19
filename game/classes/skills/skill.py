@@ -11,7 +11,6 @@ class Skill:
     required_str         = 100
     required_agi         = 100
 
-    available_for        = []  # List of Playable Classes
     _type                = ''
 
     def __repr__(self):

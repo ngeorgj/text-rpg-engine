@@ -17,7 +17,6 @@ class RecurrentDebuff(Debuff):
 class MassDebuff(Effect):
 
     def activate(self, group_of_enemies):
-        self.on_cast()
         for ally in group_of_enemies:
             setattr(ally, self.attribute, getattr(ally, self.attribute) - self.effect_value)
 

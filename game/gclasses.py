@@ -12,8 +12,8 @@ Classes can be created using the parent classes from game/classes/classe.
 Use these classes as Parent Class for your Class.
 Use the classes below as a baseline.
 """
-
-from game.classes.classe import IntelligenceBasedClass, StrenghtBasedClass
+from game.classes.pclasses.int_class import IntelligenceBasedClass
+from game.classes.pclasses.str_class import StrenghtBasedClass
 from game.items.weapons import RustedSword, WoodenStaff
 
 class Mage(IntelligenceBasedClass):
@@ -23,6 +23,8 @@ class Mage(IntelligenceBasedClass):
     intelligence = 15
     strenght = 3
     agility = 3
+
+
 
     hp = 120
     mp = 220
@@ -37,6 +39,8 @@ class Warrior(StrenghtBasedClass):
     intelligence = 3
     strenght = 15
     agility = 3
+
+
 
     hp = 280
     mp = 40

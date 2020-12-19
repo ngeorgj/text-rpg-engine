@@ -1,4 +1,5 @@
-from game.classes.skills.skill import HealingSkill, OffensiveSkill
+from game.classes.skills.healing import HealingSkill
+from game.classes.skills.offensive import OffensiveSkill
 
 # Healing Skills
 LesserHeal = HealingSkill()

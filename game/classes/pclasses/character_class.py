@@ -6,6 +6,13 @@ class CharacterClass:
     name = ''
     skills = []
 
+    armor_items = {
+        'head': '',
+        'torso': '',
+        'legs': '',
+        'foot': ''
+    }
+
     # TYPES OF CLASSES
     PHYSICAL = 'Physical'
     MAGICAL = 'Magical'
@@ -25,23 +32,3 @@ class CharacterClass:
     def __repr__(self):
         return self.name
 
-
-class StrenghtBasedClass(CharacterClass):
-
-    def __init__(self):
-        self.build_base = [self.PHYSICAL,
-                           self.MELEE]
-
-class AgilityBasedClass(CharacterClass):
-
-    def __init__(self):
-        self.build_base = [self.PHYSICAL,
-                           self.RANGED,
-                           self.MELEE]
-
-class IntelligenceBasedClass(CharacterClass):
-
-    def __init__(self):
-        self.build_base = [self.MAGICAL,
-                           self.ELEMENTAL,
-                           self.RANGED]

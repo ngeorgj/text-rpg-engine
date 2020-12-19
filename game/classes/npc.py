@@ -1,4 +1,4 @@
-from game.classes.character import Character
+from game.classes.characters.character import Character
 
 
 class NPC(Character):

@@ -1,8 +1,7 @@
 from game.classes.skills.offensive import OffensiveSkill
-
-# Support Skills
 from game.classes.skills.status import StatusSkill
 
+# Support Skills
 WarShout = StatusSkill()
 
 # Offensive Skills
