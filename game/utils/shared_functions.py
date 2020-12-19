@@ -1,12 +1,19 @@
 from game.utils.cmd_line_functions import cls
 
-
 def clear_and_text(argument):
     cls()
     print(argument)
 
 def text(content):
     print(f" {content}")
+
+def game_says(content):
+    print((len(content) + 3) * '-')
+    print(" Game Says ")
+    print((len(content) + 3) * '-')
+    print(f'  {content}')
+    print((len(content) + 3) * '-')
+    print()
 
 def get_month(integer):
     months = {

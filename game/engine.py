@@ -1,4 +1,4 @@
-from game.animations.base import intro
+from game.animations.intro import intro
 from game.config import GAME_OPTIONS, GAME_DESCRIPTION, GAME_NAME, GAME_CHAPTERS
 from game.utils.constants import PLAY, CHAPTERS, ABOUT, LORE, HOW_TO_PLAY, QUIT
 from game.utils import menu_items

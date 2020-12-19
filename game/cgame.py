@@ -2,6 +2,7 @@ from game.classes.player import Player
 
 
 class Game:
+
     engine = object
     _player = object
 

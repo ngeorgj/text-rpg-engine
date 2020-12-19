@@ -1,7 +1,5 @@
 from game.utils.cmd_line_functions import cls
-from game.utils.game_functions import game_print
 
-from game.utils.shared_functions import text
 
 
 def question(question, clear_before=False):
@@ -10,6 +8,7 @@ def question(question, clear_before=False):
     return input(f' {question}\n -> ')
 
 def question_with_options(question, choices, clear_before=False, silent=False):
+    from game.utils.shared_functions import text
 
     if clear_before:
         cls()

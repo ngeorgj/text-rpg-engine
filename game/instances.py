@@ -1,5 +1,5 @@
 from game.engine import Engine
-from g import Game
+from game.cgame import Game
 
 game_engine = Engine()
 

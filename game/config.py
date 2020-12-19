@@ -1,5 +1,5 @@
-from game.game_classes import Warrior, Paladin, Mage
-from game.game_races import Human, Elf
+from game.gclasses import Warrior, Paladin, Mage
+from game.graces import Human, Elf
 from game.skills import warrior, mage, paladin
 from game.reference.countries import London
 from game.utils.constants import *
