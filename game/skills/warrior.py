@@ -1,7 +1,9 @@
-from game.classes.skill import Skill, OffensiveSkill
+from game.classes.skills.offensive import OffensiveSkill
 
 # Support Skills
-WarShout = Skill()
+from game.classes.skills.status import StatusSkill
+
+WarShout = StatusSkill()
 
 # Offensive Skills
 QuickSlash = OffensiveSkill()

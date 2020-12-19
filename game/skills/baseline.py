@@ -1,4 +1,4 @@
-from game.classes.skill import Skill
+from game.classes.skills.skill import Skill
 
 # Support Skills
 SkillName = Skill()

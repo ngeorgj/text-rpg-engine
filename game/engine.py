@@ -15,7 +15,7 @@ from game.utils.constants import PLAY, CHAPTERS, ABOUT, LORE, HOW_TO_PLAY, QUIT
 from game.utils import menu_items
 from game.utils.game_functions import end_game
 from game.utils.menu_items import game_menu
-from game.utils.question_functions import question_with_options, question
+from game.utils.question_functions import question_with_options
 
 
 class Engine:
@@ -45,8 +45,7 @@ class Engine:
 
     def play(self, game):
         game.create_character()
-        for chapter in GAME_CHAPTERS:
-            chapter().chapter_loop()
+        [chapter().loop_start() for chapter in GAME_CHAPTERS if not chapter.is_complete]
         end_game()
 
 

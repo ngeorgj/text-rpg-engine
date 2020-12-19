@@ -1,7 +1,8 @@
 from math import floor
 from game.classes.character import Character
+from game.classes.geopositioning import GeoPositioning
 from game.classes.inventory import Inventory
-
+from game.utils.constants import OPEN_INVENTORY, TRAVEL
 
 from game.utils.question_functions import question, question_with_options
 
@@ -45,3 +46,11 @@ class Player(Character):
         print(f' Active Effects')
         print(f' {[self.active_effects]}')
         print(f'[ Actions ]====================================================================')
+
+    @property
+    def base_actions(self):
+        return {OPEN_INVENTORY: self.inventory.show,
+                TRAVEL: GeoPositioning.make_travel}
+
+    def actions(self):
+        return dict(self.base_actions, **self.specific_actions)

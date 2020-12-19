@@ -1,17 +1,13 @@
 from game.animations.travel import travel_animation
-from game.config import ALLOWED_COUNTRIES
-from game.reference.countries import London
+from game.reference.countries import available_countries
 
 
 class GeoPositioning:
+    COUNTRIES = available_countries
 
-    COUNTRIES = ALLOWED_COUNTRIES
+    by_air = [country for country in COUNTRIES if country.has_airport]
 
-    by_air = []
-
-    by_sea = [
-
-    ]
+    by_sea = [country for country in COUNTRIES if country.has_port]
 
     @staticmethod
     def make_travel(player, destination):

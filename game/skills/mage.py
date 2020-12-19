@@ -1,7 +1,11 @@
-from game.classes.skill import Skill, OffensiveSkill
+from game.classes.skills.skill import OffensiveSkill, StatusSkill
+
 
 # Support Skills
-IceArmor   = Skill()
+class IceArmor(StatusSkill):
+    name = 'Ice Armor'
+    description = 'Hardens your skin increasing your armor for 5 turns'
+
 
 # Offensive Skills
 Fireball   = OffensiveSkill()

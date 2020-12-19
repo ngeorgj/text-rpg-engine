@@ -45,6 +45,7 @@ YES = 'yes'
 NO = 'no'
 CHOICES_YES_NO = [YES, NO]
 ATTACK = 'attack'
+CAST_SPELL = 'cast spell'
 OPEN_INVENTORY = 'open inventory'
 
 # PLACES
