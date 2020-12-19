@@ -1,3 +1,13 @@
+"""
+// Filename : Elements
+// Created by: @ngeorgj
+
+Here you can add some usable objects.
+
+You can create more dices if you want!
+"""
+
+
 # Dices
 from game.classes.dice import Dice
 

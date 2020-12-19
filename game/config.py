@@ -1,3 +1,25 @@
+"""
+// Filename : Config
+// Created by: @ngeorgj
+
+This File is the Brain of the Engine.
+
+ Here you will Add your created instances and chapters.
+
+   - Import the Instance
+   - Add the instance to the suitable List
+   - Don't forget to Call() it!
+
+ Change the values from "GAME_NAME" till "GAME_STARTING_YEAR" with the gamebase data.
+
+ RACES     from    game/graces.py
+ CLASSES   from    game/gclasses.py
+ CHAPTERS  from    game/chapters
+
+ Take Care with the modifications.
+
+"""
+
 from game.gclasses import Warrior, Paladin, Mage
 from game.graces import Human, Elf
 from game.reference.countries import available_countries

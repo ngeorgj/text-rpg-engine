@@ -1,3 +1,14 @@
+"""
+** Attention: Do not change any values in this file!
+
+// Filename : Engine
+// Created by: @ngeorgj
+
+This file organizes basically everything.
+
+It serves as a base for the first menu in the game.
+"""
+
 from game.animations.intro import intro
 from game.config import GAME_OPTIONS, GAME_DESCRIPTION, GAME_NAME, GAME_CHAPTERS
 from game.utils.constants import PLAY, CHAPTERS, ABOUT, LORE, HOW_TO_PLAY, QUIT

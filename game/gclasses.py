@@ -1,5 +1,6 @@
 """
-Classes
+// Filename : GClasses
+// Created by: @ngeorgj
 
 Classes can be created using the parent classes from game/classes/classe.
 
