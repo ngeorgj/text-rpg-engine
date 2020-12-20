@@ -9,3 +9,5 @@ commit
 
 cache
 venv
+.idea
+venv_game
